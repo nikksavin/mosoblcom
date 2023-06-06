@@ -1,0 +1,28 @@
+include _mixins
+block header
+
+    header#header.header
+        .container
+        
+            .header__wrapper
+
+                .header__logo 
+                    img(src="assets/images/logo.svg", alt="logo")
+                
+                nav.header__nav
+                    ul.header__nav-list
+                        li
+                            a  О компании
+                        li
+                            a Направления
+                        li 
+                            a Выполненные проекты
+                        li 
+                            a Контакты
+
+                .header__links
+                    a(href="/").header__personal Личный кабинет
+                    a(href="tel:+7 495 292-02-02").header__phone +7 495 292-02-02
+
+                .header__burger
+                    img(src="assets/images/burger.svg", alt="mobile-nav-btn")
