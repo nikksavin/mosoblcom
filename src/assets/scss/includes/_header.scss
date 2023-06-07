@@ -1,0 +1,37 @@
+.header {
+    background: rgba(46, 49, 51, 0.8);
+    padding: 28px 0;
+    border-bottom: 1px solid #CFCFCF;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 5;
+}
+.container {
+}
+.header__wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+.header__logo {
+    width: 177px;
+    height: 29px;
+}
+.header__nav {
+    display: none;
+}
+.header__nav-list {
+}
+.header__links {
+    display: none;
+}
+.header__personal {
+}
+.header__phone {
+}
+.header__burger {
+    width: 57px;
+    height: 33px;
+}
+
