@@ -7,9 +7,24 @@ extends includes/_page
 
 block main
 
-    #hero
-        .section.hero__section
-            section.hero
+    .hero__menu#menu.container
+        .swiper-wrapper
+            li.swiper-slide.active(data-menuanchor='screen1' data-hash="screen1")
+                a(href='#screen1') Благоустройство и городская среда
+            li.swiper-slide(data-menuanchor='screen2' data-hash="screen2")
+                a(href='#screen2') Комплексные решения и спец.проекты
+            li.swiper-slide(data-menuanchor='screen3' data-hash="screen3")
+                a(href='#screen3') Услуги связи и интеграция
+            li.swiper-slide(data-menuanchor='screen4' data-hash="screen4")
+                a(href='#screen4') Проектирование
+            li.swiper-slide(data-menuanchor='screen5' data-hash="screen5")
+                a(href='#screen5') Производство с подразделением НИОКР
+            li.swiper-slide(data-menuanchor='screen6' data-hash="screen6")
+                a(href='#screen6') О компании
+
+    #hero.hero
+        #screen1.section.hero__section
+            section.hero__slider
                 .swiper-wrapper
 
                     .hero__slide.swiper-slide(style="background-image: url(assets/images/hero1.png)") 
@@ -17,11 +32,6 @@ block main
                         .hero-wrapper
 
                             .container
-
-                                .hero__nav
-                                    .swiper-wrapper 
-                                        .swiper-slide 1
-                                        .swiper-slide 2
 
                                 .hero__content 
 
@@ -41,9 +51,55 @@ block main
 
                             .container
 
-                                .hero__nav
-                                    .swiper-wrapper 
-                                        .swiper-slide
+                                .hero__content 
+
+                                    .hero__left 
+
+                                        .hero__direction направление
+                                        h1.hero__title Благоустройство и городская среда
+                                        .hero__text Одним из активно развивающихся направлений деятельности компании является реализация проектов в области благоустройства парковых зон и уличного пространства с оснащением современной инфраструктурой безопасности, комплексами оповещения и реагирования оперативных служб, интеграции локальных подсистем в централизованные городские и федеральные системы.
+                                        a(href="").hero__btn.btn-style подробнее о направлении
+
+                                    .hero__right 
+                                        p Одним из активно развивающихся направлений деятельности компании является реализация проектов в области благоустройства парковых зон и уличного пространства с оснащением современной инфраструктурой безопасности, комплексами оповещения и реагирования оперативных служб, интеграции локальных подсистем в централизованные городские и федеральные системы.
+
+                .hero__bottom
+                    .container
+                        .hero__bottom-wrapper
+                            .hero__pagination 
+                            .hero__counter
+                        
+                .hero__buttons
+                    .hero__nav-next next
+
+
+        #screen2.section.hero__section(style="background-image: url(assets/images/hero1.png)")
+            section.hero__slider
+                .swiper-wrapper
+
+                    .hero__slide.swiper-slide(style="background-image: url(assets/images/hero1.png)") 
+                        
+                        .hero-wrapper
+
+                            .container
+
+                                .hero__content 
+
+                                    .hero__left 
+
+                                        .hero__direction направление
+                                        h1.hero__title Благоустройство и городская среда
+                                        .hero__text Одним из активно развивающихся направлений деятельности компании является реализация проектов в области благоустройства парковых зон и уличного пространства с оснащением современной инфраструктурой безопасности, комплексами оповещения и реагирования оперативных служб, интеграции локальных подсистем в централизованные городские и федеральные системы.
+                                        a(href="").hero__btn.btn-style подробнее о направлении
+
+                                    .hero__right 
+                                        p Одним из активно развивающихся направлений деятельности компании является реализация проектов в области благоустройства парковых зон и уличного пространства с оснащением современной инфраструктурой безопасности, комплексами оповещения и реагирования оперативных служб, интеграции локальных подсистем в централизованные городские и федеральные системы.
+                    
+                    .hero__slide.swiper-slide(style="background-image: url(assets/images/hero1.png)") 
+                        
+                        .hero-wrapper
+
+                            .container
 
                                 .hero__content 
 
@@ -57,16 +113,39 @@ block main
                                     .hero__right 
                                         p Одним из активно развивающихся направлений деятельности компании является реализация проектов в области благоустройства парковых зон и уличного пространства с оснащением современной инфраструктурой безопасности, комплексами оповещения и реагирования оперативных служб, интеграции локальных подсистем в централизованные городские и федеральные системы.
 
-            .hero__bottom
-                .container
-                    .hero__bottom-wrapper
-                        .hero__pagination 
-                        .hero__counter
+                    .hero__slide.swiper-slide(style="background-image: url(assets/images/hero1.png)") 
+                        
+                        .hero-wrapper
+
+                            .container
+
+                                .hero__content 
+
+                                    .hero__left 
+
+                                        .hero__direction направление
+                                        h1.hero__title Благоустройство и городская среда
+                                        .hero__text Одним из активно развивающихся направлений деятельности компании является реализация проектов в области благоустройства парковых зон и уличного пространства с оснащением современной инфраструктурой безопасности, комплексами оповещения и реагирования оперативных служб, интеграции локальных подсистем в централизованные городские и федеральные системы.
+                                        a(href="").hero__btn.btn-style подробнее о направлении
+
+                                    .hero__right 
+                                        p Одним из активно развивающихся направлений деятельности компании является реализация проектов в области благоустройства парковых зон и уличного пространства с оснащением современной инфраструктурой безопасности, комплексами оповещения и реагирования оперативных служб, интеграции локальных подсистем в централизованные городские и федеральные системы.
 
 
-        .section.hero__section(style="background-image: url(assets/images/hero1.png)")
-            h1 2
-        .section.hero__section
+                .hero__bottom
+                    .container
+                        .hero__bottom-wrapper
+                            .hero__pagination 
+                            .hero__counter
+
+                .hero__buttons
+                    .hero__nav-next next
+
+        #screen3.section.hero__section
             h1 3
-        .section.hero__section
+        #screen4.section.hero__section
+            h1 4
+        #screen5.section.hero__section
+            h1 4
+        #screen6.section.hero__section
             h1 4
