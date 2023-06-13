@@ -23,7 +23,8 @@ block main
                 a(href='#screen6') О компании
 
     #hero.hero
-        #screen1.section.hero__section
+
+        #screen1.section.hero__section.hero__section--banner
             section.hero__slider
                 .swiper-wrapper
 
@@ -38,7 +39,7 @@ block main
                                     .hero__left 
 
                                         .hero__direction направление
-                                        h1.hero__title Благоустройство и городская среда
+                                        h1.hero__title Благоустройство<br> и городская<br> среда
                                         .hero__text Одним из активно развивающихся направлений деятельности компании является реализация проектов в области благоустройства парковых зон и уличного пространства с оснащением современной инфраструктурой безопасности, комплексами оповещения и реагирования оперативных служб, интеграции локальных подсистем в централизованные городские и федеральные системы.
                                         a(href="").hero__btn.btn-style подробнее о направлении
 
@@ -75,10 +76,8 @@ block main
                             img(src="assets/images/btn-img.png", alt="")
                         .hero__nav-icon 
                             img(src="assets/images/arrow-right.svg", alt="")
-                
-
-
-        #screen2.section.hero__section(style="background-image: url(assets/images/hero1.png)")
+            
+        #screen2.section.hero__section.hero__section--mob
             section.hero__slider
                 .swiper-wrapper
 
@@ -131,7 +130,7 @@ block main
                         .hero__nav-icon 
                             img(src="assets/images/arrow-right.svg", alt="")
                         
-        #screen3.section.hero__section
+        #screen3.section.hero__section.hero__section--mob
 
             .hero__slide(style="background-image: url(assets/images/hero3.png)") 
                         
@@ -151,7 +150,7 @@ block main
                             .hero__right 
                                 .hero__right-text Являются только методом политического участия и заблокированы в рамках своих собственных рациональных ограничений.<br><br>А также акционеры крупнейших компаний призывают нас к новым свершениям, которые, в свою очередь, должны быть рассмотрены исключительно в разрезе маркетинговых и финансовых предпосылок.
                                 
-        #screen4.section.hero__section
+        #screen4.section.hero__section.hero__section--mob
             section.hero__slider
                 .swiper-wrapper
 
@@ -166,14 +165,14 @@ block main
                                     .hero__left 
 
                                         .hero__direction направление
-                                        h1.hero__title Проектирование Проектирование Проектирование
+                                        h1.hero__title Проектирование
                                         .hero__text Отдельным направлением деятельности является проектирование слаботочной инфраструктуры. Опираясь на многолетний опыт работы специалистов компании, собранные знания, Мособлком проектирует слаботочные системы любой сложности. В виду большой востребованности услуги на строительном рынке, Мособлком выделил отдельный офис – проектное бюро в г. Минск (Республика Белоруссия) для успешной реализации задач в этом направлении.
                                         a(href="").hero__btn.btn-style подробнее о направлении
 
                                     .hero__right 
                                         .hero__right-text Отдельным направлением деятельности является проектирование слаботочной инфраструктуры. Опираясь на многолетний опыт работы специалистов компании, собранные знания, Мособлком проектирует слаботочные системы любой сложности. В виду большой востребованности услуги на строительном рынке, Мособлком выделил отдельный офис – проектное бюро в г. Минск (Республика Белоруссия) для успешной реализации задач в этом направлении.
                                         
-                    .hero__slide.swiper-slide(style="background-image: url(assets/images/hero2.png)") 
+                    .hero__slide.swiper-slide(style="background-image: url(assets/images/hero4.png)") 
                         
                         .hero-wrapper
 
@@ -184,13 +183,13 @@ block main
                                     .hero__left 
 
                                         .hero__direction направление
-                                        h1.hero__title Благоустройство и городская среда
-                                        .hero__text Одним из активно развивающихся направлений деятельности компании является реализация проектов в области благоустройства парковых зон и уличного пространства с оснащением современной инфраструктурой безопасности, комплексами оповещения и реагирования оперативных служб, интеграции локальных подсистем в централизованные городские и федеральные системы.
+                                        h1.hero__title Проектирование
+                                        .hero__text Отдельным направлением деятельности является проектирование слаботочной инфраструктуры. Опираясь на многолетний опыт работы специалистов компании, собранные знания, Мособлком проектирует слаботочные системы любой сложности. В виду большой востребованности услуги на строительном рынке, Мособлком выделил отдельный офис – проектное бюро в г. Минск (Республика Белоруссия) для успешной реализации задач в этом направлении.
                                         a(href="").hero__btn.btn-style подробнее о направлении
 
                                     .hero__right 
-                                        .hero__right-text Одним из активно развивающихся направлений деятельности компании является реализация проектов в области благоустройства парковых зон и уличного пространства с оснащением современной инфраструктурой безопасности, комплексами оповещения и реагирования оперативных служб, интеграции локальных подсистем в централизованные городские и федеральные системы.
-                                    
+                                        .hero__right-text Отдельным направлением деятельности является проектирование слаботочной инфраструктуры. Опираясь на многолетний опыт работы специалистов компании, собранные знания, Мособлком проектирует слаботочные системы любой сложности. В виду большой востребованности услуги на строительном рынке, Мособлком выделил отдельный офис – проектное бюро в г. Минск (Республика Белоруссия) для успешной реализации задач в этом направлении.
+                                        
                 .hero__bottom
                     .container
                         .hero__bottom-wrapper
@@ -203,7 +202,8 @@ block main
                             img(src="assets/images/btn-img.png", alt="")
                         .hero__nav-icon 
                             img(src="assets/images/arrow-right.svg", alt="")
-        #screen5.section.hero__section
+        
+        #screen5.section.hero__section.hero__section--mob
             .hero__slide(style="background-image: url(assets/images/hero5.png)") 
                         
                 .hero-wrapper
@@ -221,6 +221,52 @@ block main
 
                             .hero__right 
                                 .hero__right-text Как любая, активно практикующая компания, Мособлком не может обойтись без производственного комплекса, который обеспечивает решение задач монтажным и конструкторским командам. Разрабатывая специализированные кронштейны, узлы креплений, оборудование – инженеры Мособлком существенно расширяют спектр решений, обеспечивает более эффективное решение задача с помощью «специализированных» под конкретную задачу изделий.
-                                
-        #screen6.section.hero__section
-            h1 4
+                          
+        #screen6.section.hero__section.hero__section--about.hero__section--mob
+            .hero__slide(style="background-image: url(assets/images/hero6.png)") 
+                        
+                .hero-wrapper
+
+                    .container
+
+                        .hero__content 
+
+                            .hero__left 
+
+                                h1.hero__title О компании
+                                .hero__text Общество является действующим членом СРО Ассоциации проектировщиков «Архитектурные решения» и СРО союза «Строители Московской области МосОблСтройКомплекс».
+                                a(href="").hero__btn.hero__btn--transparent подробнее о компании
+
+                            .hero__right 
+                                .hero__right-video
+                                    video(src="" poster="assets/images/video-bg.png")
+                                    .hero__right-video-content
+                                        .hero__play
+                                            img(src="assets/images/play.svg", alt="")
+                                        .hero__right-video-text Смотреть полное видео
+
+                        .hero__about-links.hero__about-links--mob
+                            a(href="").hero__about-link
+                                span Адрес
+                                span Москва, Ивана Иванова ,14
+                            a(href="").hero__about-link
+                                span телефон
+                                span +7 495 292-02-02
+                            a(href="").hero__about-link
+                                span E-mail
+                                span info@mosoblcom.ru
+            .container                  
+                .hero__about-links.hero__about-links--desk
+                    a(href="").hero__about-link
+                        span Адрес
+                        span Москва, Ивана Иванова ,14
+                    a(href="").hero__about-link
+                        span телефон
+                        span +7 495 292-02-02
+                    a(href="").hero__about-link
+                        span E-mail
+                        span info@mosoblcom.ru
+
+    a(href="").hero__get-request обсудить проект
+
+    

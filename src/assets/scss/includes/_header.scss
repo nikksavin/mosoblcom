@@ -44,6 +44,33 @@
 }
 .header__nav {
     display: none;
+
+    @include breakpoint(hd) {
+        display: flex;
+        margin-left: auto;
+    }
+
+    ul {
+        display: flex;
+    }
+
+    li {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 17px;
+        text-align: center;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        margin-right: 60px;
+
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
 }
 .header__nav-list {
 }
@@ -54,6 +81,10 @@
         display: flex;
         margin-left: auto;
         margin-right: 80px;
+    }
+
+    @include breakpoint(xl) {
+        margin-right: 0;
     }
 
 }
@@ -85,5 +116,11 @@
 .header__burger {
     width: 57px;
     height: 33px;
+
+    @include breakpoint(xl) {
+        display: none;
+    }
+
+
 }
 

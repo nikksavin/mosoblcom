@@ -1,85 +1,129 @@
-.index-page #page {
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-}
+.index-page {
 
+    overflow: auto;
+
+    @include breakpoint(md) {
+        overflow: hidden;
+    }
+
+	#page {
+        overflow-x: hidden;
+		overflow-y: scroll;
+        @include breakpoint(md) {
+            overflow: hidden;
+            width: 100vw;
+            height: 100vh;
+        }
+	}
+	
+}
 
 .hero__section {
-    background-color: red;
+	background-color: #636e74;
+	position: relative;
+
+
 }
 
-.hero__slider {
+.hero__section--banner {
     width: 100vw;
     height: 100vh;
+
+    .hero__content {
+        margin-top: 110px;
+    }
+
+}
+
+
+
+.hero__slider {
+    width: 100%;
+    height: 100%;
+
+    @include breakpoint(md) {
+        width: 100vw;
+	    height: 100vh;
+    }
+
+
 }
 .swiper-wrapper {
 }
 .hero__slide {
-    display: flex;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100%;
-    width: 100%;
+	display: flex;
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 100%;
+    height: auto!important;
+
+
+    @include breakpoint(md) {
+        height: 100%!important;
+    }
+
 }
 .swiper-slide {
 }
 .container {
 }
 .hero-wrapper {
-    display: flex;
-    flex-direction: column;
-    margin: auto 0;
+	display: flex;
+	flex-direction: column;
+	margin: auto 0;
+	width: 100%;
+    height: 100%;
 
-    @include breakpoint(lg) {
-        padding-top: 160px;
-        
+    @include breakpoint(md) {
+        height: unset;
     }
 
+
+	@include breakpoint(lg) {
+		padding-top: 160px;
+	}
 }
 .hero__nav {
-    display: none;
+	display: none;
 
-    @include breakpoint(lg) {
-        display: flex;
-        /* margin-top: auto; */
-        /* margin-bottom: 150px; */
-        /* margin-left: auto; */
-        /* margin-right: 30px; */
-        position: absolute;
-        top: 50%;
-        right: 50px;
-    }
+	@include breakpoint(lg) {
+		display: flex;
+		/* margin-top: auto; */
+		/* margin-bottom: 150px; */
+		/* margin-left: auto; */
+		/* margin-right: 30px; */
+		position: absolute;
+		top: 50%;
+		right: 50px;
+	}
 
-    @include breakpoint(xl) {
-        right: 150px;
-    }
-
+	@include breakpoint(xl) {
+		right: 150px;
+	}
 }
 
 .hero__nav-next {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: fit-content;
-    height: fit-content;
-    width: 193px;
-    height: 193px;
-    cursor: pointer;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: fit-content;
+	height: fit-content;
+	width: 193px;
+	height: 193px;
+	cursor: pointer;
 }
 
-
 .hero__nav-next:hover .hero__nav-img {
-    display: flex;
-    animation: zoom-in .5s ease-out;
+	display: flex;
+	// animation: zoom-in .5s ease-out;
 }
 
 .hero__nav-next:hover .hero__nav-icon {
-    width: 90px;
-    height: 90px;
-    transition: all .5s ease-out;
-    // animation: zoom-out .5s ease-out;
+	width: 90px;
+	height: 90px;
+	transition: all 0.5s ease-out;
+	// animation: zoom-out .5s ease-out;
 }
 
 // .hero__nav-next:hover .hero__nav-icon img {
@@ -98,293 +142,528 @@
 	}
 }
 .hero__nav-img {
-    display: none;
-    transition: all 1s ease-in;
-    position: absolute;
-    width: 193px;
-    height: 193px;
-    border: 1px solid #00000099;
-    border-radius: 50%;
-    z-index: 1;
+	display: none;
+	transition: all 1s ease-in;
+	position: absolute;
+	width: 193px;
+	height: 193px;
+	border: 1px solid #00000099;
+	border-radius: 50%;
+	z-index: 1;
 }
 
 .hero__nav-icon {
-    width: 115px;
-    height: 115px;
-    background: #636E74;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    overflow: hidden;
-    z-index: 2;
+	width: 115px;
+	height: 115px;
+	background: #636e74;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+	overflow: hidden;
+	z-index: 2;
 }
 
-
 @keyframes zoom-in {
-    0% {
-        transform: scale(0.6);
-        opacity: 0;
-    }
-    100% {
-        transform: scale(1);
-        opacity: 1;
-    }
+	0% {
+		transform: scale(0.6);
+		opacity: 0;
+	}
+	100% {
+		transform: scale(1);
+		opacity: 1;
+	}
 }
 
 .hero__content {
-    display: flex;
-    flex-direction: column;
+	display: flex;
+	flex-direction: column;
 
-    @include breakpoint(lg) {
-        flex-direction: row;
-    }
-
+	@include breakpoint(lg) {
+		flex-direction: row;
+	}
 }
 .hero__left {
-    display: flex;
-    flex-direction: column;
+	display: flex;
+	flex-direction: column;
 
-    @include breakpoint(lg) {
-        width: calc( 100% / 12 * 9 );
-    }
+	@include breakpoint(lg) {
+		width: calc(100% / 12 * 9);
+	}
 
-    @include breakpoint(xl) {
-        width: calc( 100% / 12 * 5 );
-        margin-left: auto;
-    }
+	@include breakpoint(xl) {
+		width: calc(100% / 12 * 5);
+	}
 
+	@include breakpoint(hd) {
+		margin-left: 290px;
+	}
 }
 .hero__direction {
-    display: none;
+	display: none;
 
-    @include breakpoint(lg) {
-        display: flex;
-        font-family: 'Oswald';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 20px;
-        line-height: 140%;
-        text-transform: uppercase;
-        color: #FFFFFF;
-        margin-bottom: 30px;
-    }
-
+	@include breakpoint(lg) {
+		display: flex;
+		font-family: "Oswald";
+		font-style: normal;
+		font-weight: 400;
+		font-size: 20px;
+		line-height: 140%;
+		text-transform: uppercase;
+		color: #ffffff;
+		margin-bottom: 30px;
+	}
 }
 .hero__title {
-    font-family: 'Oswald';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 110%;
-    text-transform: uppercase;
-    color: #FFFFFF;
-    margin-bottom: 50px;
+	font-family: "Oswald";
+	font-style: normal;
+	font-weight: 700;
+	font-size: 36px;
+	line-height: 110%;
+	text-transform: uppercase;
+	color: #ffffff;
+	margin-bottom: 30px;
 
-    @include breakpoint(lg) {
-        font-weight: 700;
-        font-size: 77px;
-        line-height: 110%;
-        text-transform: uppercase;
-        color: #FFFFFF;
-        margin-bottom: 30px;
+    @include breakpoint(md) {
+        margin-bottom: 50px;
     }
 
-    @include breakpoint(xl) {
-        
-    }
 
+	@include breakpoint(lg) {
+		font-weight: 700;
+		font-size: 77px;
+		line-height: 110%;
+		text-transform: uppercase;
+		color: #ffffff;
+		margin-bottom: 30px;
+	}
+
+	@include breakpoint(xl) {
+	}
 }
 
 .hero__text {
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 170%;
-    color: #FFFFFF;
-    margin-bottom: 50px;
+	font-family: "Montserrat";
+	font-style: normal;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 170%;
+	color: #ffffff;
+	margin-bottom: 30px;
 
-    @include breakpoint(lg) {
-        margin-bottom: 30px;
+    @include breakpoint(md) {
+        margin-bottom: 50px;
     }
 
-    @include breakpoint(xl) {
-        display: none;
-    }
 
+	@include breakpoint(lg) {
+		margin-bottom: 30px;
+	}
+
+	@include breakpoint(xl) {
+		display: none;
+	}
 }
 .hero__btn {
-    padding: 20px;
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 15px;
-    text-align: center;
-    text-transform: uppercase;
-    color: #2B2A29;
-    background: #EEDFA8;
-    width: fit-content;
+	padding: 20px;
+	font-family: "Montserrat";
+	font-style: normal;
+	font-weight: 500;
+	font-size: 12px;
+	line-height: 15px;
+	text-align: center;
+	text-transform: uppercase;
+	color: #2b2a29;
+	background: #eedfa8;
+	width: fit-content;
 
-    @include breakpoint(lg) {
-        font-size: 15px;
-        padding: 26px 36px;
-    }
-
+	@include breakpoint(lg) {
+		font-size: 15px;
+		padding: 26px 36px;
+	}
 }
 .btn-style {
 }
 .hero__right {
-    display: none;
+	display: none;
 
-    @include breakpoint(lg) {
-        display: flex;
-        width: calc( 100% / 12 * 3 );
-    }
+	@include breakpoint(lg) {
+		display: flex;
+		width: calc(100% / 12 * 3);
+	}
 
-    @include breakpoint(xl) {
-        display: flex;
-        width: calc( 100% / 12 * 5 );
-        margin-left: auto;
-    }
-
+	@include breakpoint(xl) {
+		display: flex;
+		width: calc(100% / 12 * 5);
+		margin-left: auto;
+	}
 }
 
 .hero__right-text {
-    display: none;
+	display: none;
 
-    @include breakpoint(xl) {
-        display: flex;
-        font-family: 'Montserrat';
-        font-style: normal;
-        font-weight: 500;
-        font-size: 14px;
-        line-height: 170%;
-        color: #FFFFFF;
-        max-width: 280px;
-    }
-
+	@include breakpoint(xl) {
+		display: flex;
+		font-family: "Montserrat";
+		font-style: normal;
+		font-weight: 500;
+		font-size: 14px;
+		line-height: 170%;
+		color: #ffffff;
+		max-width: 280px;
+	}
 }
-
 
 .hero__bottom {
-    position: absolute;
-    bottom: 17px;
-    z-index: 1;
-    width: 100%;
+	position: absolute;
+	bottom: 17px;
+	z-index: 1;
+	width: 100%;
 
-
-    @include breakpoint(xl) {
-        bottom: 43px;
-    }
-
+	@include breakpoint(xl) {
+		bottom: 43px;
+	}
 }
 .hero__pagination {
-    width: fit-content !important;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+	width: fit-content !important;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
 
-    .swiper-pagination-bullet {
-        width: 14px!important;
-        height: 3px;
-        background: #FFFFFF;
-        border-radius: 0!important;
-        opacity: 1;
-    } 
-    
-    .swiper-pagination-bullet-active {
-        width: 60px!important;
-        transition: all .2s ease-in;
-    }
+	.swiper-pagination-bullet {
+		width: 14px !important;
+		height: 3px;
+		background: #ffffff;
+		border-radius: 0 !important;
+		opacity: 1;
+	}
 
+	.swiper-pagination-bullet-active {
+		width: 60px !important;
+		transition: all 0.2s ease-in;
+	}
 
-    @include breakpoint(xl) {
-        margin: 0 auto;
-    }
-
+	@include breakpoint(xl) {
+		margin: 0 auto;
+	}
 }
 
-.hero-inner__slider  {
-    background-color: red;
+.hero-inner__slider {
+	background-color: red;
 }
 
 .hero-inner-wrapper {
-    width: 100%;
-    height: 100%;
+	width: 100%;
+	height: 100%;
 }
 
 .hero__bottom-wrapper {
-    display: flex;
-    justify-content: flex-end;
+	display: flex;
+	justify-content: space-between;
+
+    @include breakpoint(md) {
+        justify-content: flex-end;
+    }
+
 }
 
 .hero__counter {
-    display: flex;
-    align-items: flex-end;
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 22px;
-    text-align: right;
-    color: #A7A7A7;
-    width: fit-content!important;
-    margin-left: 15px;
+	display: flex;
+	align-items: flex-end;
+	font-family: "Montserrat";
+	font-style: normal;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 22px;
+	text-align: right;
+	color: #a7a7a7;
+	width: fit-content !important;
+	margin-left: 15px;
 
-    span.swiper-pagination-current {
-        font-family: 'Montserrat';
-        font-style: normal;
-        font-weight: 300;
-        font-size: 36px;
-        line-height: 34px;
-        text-align: right;
-        color: #EEDFA8;
-    }
+	span.swiper-pagination-current {
+		font-family: "Montserrat";
+		font-style: normal;
+		font-weight: 300;
+		font-size: 36px;
+		line-height: 34px;
+		text-align: right;
+		color: #eedfa8;
+	}
 
-    span.swiper-pagination-total {
-        font-family: 'Montserrat';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 18px;
-        line-height: 22px;
-        text-align: right;
-        color: #A7A7A7;
-        margin-left: 4px;
-    }
+	span.swiper-pagination-total {
+		font-family: "Montserrat";
+		font-style: normal;
+		font-weight: 400;
+		font-size: 18px;
+		line-height: 22px;
+		text-align: right;
+		color: #a7a7a7;
+		margin-left: 4px;
+	}
 }
 
 .hero__menu {
+	display: none;
+	position: absolute;
+	top: 20%;
+	z-index: 10;
+
+	li {
+		width: fit-content !important;
+		max-width: 226px;
+		font-family: "Oswald";
+		font-style: normal;
+		font-weight: 400;
+		font-size: 20px;
+		line-height: 140%;
+		text-transform: uppercase;
+		color: #ffffff;
+		opacity: 0.3;
+	}
+
+	li.active {
+		opacity: 1;
+	}
+
+	@include breakpoint(lg) {
+		display: flex;
+	}
+
+	// @include breakpoint(xl) {
+	//     margin-left: 14.9%;
+	// }
+
+	.swiper-wrapper {
+		@include breakpoint(hd) {
+			padding-left: 290px;
+		}
+	}
+}
+
+.hero__get-request {
+	display: none;
+
+	@include breakpoint(hd) {
+        display: flex;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		font-family: "Montserrat";
+		font-style: normal;
+		font-weight: 500;
+		font-size: 15px;
+		line-height: 18px;
+		text-align: center;
+		text-transform: uppercase;
+		color: #ffffff;
+		padding: 36px 26px;
+		background: #636e74;
+		z-index: 6;
+		writing-mode: tb-rl;
+		transform: rotate(180deg);
+	}
+}
+
+.hero__right-video {
+	width: 100%;
+	height: 214px;
+	border: 1px solid #eedfa8;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	@include breakpoint(lg) {
+		width: 567px;
+		height: 326px;
+	}
+
+	video {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	.hero__play {
+		background: #636e74;
+		width: 68px;
+		height: 68px;
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+}
+
+.hero__right-video-content {
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	@include breakpoint(xl) {
+		margin-top: 70px;
+	}
+}
+
+.hero__right-video-text {
+	font-family: "Oswald";
+	font-style: normal;
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 140%;
+    margin-top: 25px;
+	text-align: center;
+	text-transform: uppercase;
+	color: #ffffff;
+
+    @include breakpoint(md) {
+        margin-top: 63px;
+    }
+
+}
+
+.hero__about-links {
+	display: flex;
+	flex-wrap: wrap;
+    width: 100%;
+
+    @include breakpoint(hd) {
+        margin-left: 290px;
+    }
+}
+
+.hero__about-link {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+    margin-bottom: 20px;
+
+	span:first-child {
+		font-style: normal;
+		font-weight: 500;
+		font-size: 14px;
+		line-height: 17px;
+		text-transform: uppercase;
+		color: #ffffff;
+	}
+
+	span:last-child {
+		margin-top: 12px;
+		font-style: normal;
+		font-weight: 400;
+		font-size: 20px;
+		line-height: 24px;
+		text-transform: uppercase;
+		color: #ffffff;
+	}
+
+    @include breakpoint(md) {
+        width: 30%;
+    }
+
+}
+
+
+.hero__section--mob {
+
+    .hero__content {
+        padding: 105px 0;
+
+        @include breakpoint(md) {
+            padding: unset;
+        }
+
+    }
+
+    .hero__btn {
+        margin-bottom: 30px;
+
+        @include breakpoint(md) {
+            margin-bottom: 0;
+        }
+
+    }
+
+}
+
+
+.hero__section--about {
+	.hero__right {
+		display: flex;
+	}
+
+    .hero__content {
+        padding-bottom: 25px;
+
+        @include breakpoint(md) {
+            flex-direction: row;
+        }
+
+    }
+
+    .hero__left {
+
+        @include breakpoint(md) {
+            width: calc( 100% / 12 * 6 );
+        }
+
+        @include breakpoint(lg) {
+            width: calc( 100% / 12 * 4 );
+        }
+
+       
+    }
+
+    .hero__right {
+
+        @include breakpoint(md) {
+            width: calc( 100% / 12 * 6 );
+        }
+
+        // @include breakpoint(lg) {
+        //     width: calc( 100% / 12 * 6 );
+        //     margin-left: 0;
+        // }
+
+        
+    }
+
+    .hero__left .hero__text {
+        display: flex;
+
+        @include breakpoint(lg) {
+            max-width: 420px;
+        }
+    }
+
+}
+
+.hero__about-links--mob {
+    @include breakpoint(md) {
+        display: none;
+    }
+}
+
+.hero__about-links--desk {
     display: none;
-    position: absolute;
-    top: 20%;
-    z-index: 10;
-
-    li {
-        width: fit-content!important;
-        max-width: 226px;
-        font-family: 'Oswald';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 20px;
-        line-height: 140%;
-        text-transform: uppercase;
-        color: #FFFFFF;
-        opacity: 0.3;
-    }
-
-    li.active {
-        opacity: 1;
-    }
 
     @include breakpoint(lg) {
         display: flex;
+        flex-wrap: wrap;
+        position: absolute;
+        z-index: 11111;
+        bottom: 60px;
+        width: 80%;
     }
 
-    // @include breakpoint(xl) {
-    //     margin-left: 8.9%;
-    // }
 
+}
+
+.hero__btn.hero__btn--transparent {
+    border: 1px solid #EEDFA8;
+    background-color: transparent;
+    color: #ffffff;
 }
