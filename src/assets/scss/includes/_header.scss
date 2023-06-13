@@ -1,126 +1,148 @@
 .header {
-    background: rgba(46, 49, 51, 0.8);
-    padding: 28px 0;
-    border-bottom: 1px solid #CFCFCF;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 7;
+	background: rgba(46, 49, 51, 0.8);
+	padding: 28px 0;
+	border-bottom: 1px solid #cfcfcf;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 7;
 
-    @include breakpoint(lg) {
-        padding: 35px 0;
-    }
-
-
+	@include breakpoint(lg) {
+		padding: 35px 0;
+	}
 }
 .container {
 }
 .header__wrapper {
-    display: flex;
-    justify-content: space-between;
+	display: flex;
+	justify-content: space-between;
 
-    @include breakpoint(lg) {
-        align-items: center;
-    }
-
-
+	@include breakpoint(lg) {
+		align-items: center;
+	}
 }
 .header__logo {
-    width: 177px;
-    height: 29px;
+	width: 177px;
+	height: 29px;
 
-    @include breakpoint(lg) {
-        width: 295px;
-        height: 49px;
-    }
+	@include breakpoint(lg) {
+		width: 295px;
+		height: 49px;
+	}
 
-    img {
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-    }
-
+	img {
+		width: 100%;
+		height: 100%;
+		object-fit: contain;
+	}
 }
 .header__nav {
-    display: none;
+	display: none;
 
-    @include breakpoint(hd) {
-        display: flex;
-        margin-left: auto;
-    }
+	@include breakpoint(hd) {
+		display: flex;
+		margin-left: auto;
+	}
 
-    ul {
-        display: flex;
-    }
+	ul {
+		display: flex;
+	}
 
-    li {
-        font-family: 'Montserrat';
-        font-style: normal;
-        font-weight: 500;
-        font-size: 14px;
-        line-height: 17px;
-        text-align: center;
-        text-transform: uppercase;
-        color: #FFFFFF;
-        margin-right: 60px;
+	li {
+		font-family: "Montserrat";
+		font-style: normal;
+		font-weight: 500;
+		font-size: 14px;
+		line-height: 17px;
+		text-align: center;
+		text-transform: uppercase;
+		color: #ffffff;
+		margin-right: 60px;
 
-
-        &:last-child {
-            margin-right: 0;
-        }
-    }
-
+		&:last-child {
+			margin-right: 0;
+		}
+	}
 }
 .header__nav-list {
 }
 .header__links {
-    display: none;
+	display: none;
 
-    @include breakpoint(lg) {
-        display: flex;
-        margin-left: auto;
-        margin-right: 80px;
-    }
+	@include breakpoint(lg) {
+		display: flex;
+		margin-left: auto;
+		margin-right: 80px;
+	}
 
-    @include breakpoint(xl) {
-        margin-right: 0;
-    }
-
+	@include breakpoint(xl) {
+		margin-right: 0;
+	}
 }
 .header__personal {
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 17px;
-    text-align: center;
-    text-transform: uppercase;
-    color: #FFFFFF;
-    border-right: 1px solid #C8C8C8;
-    padding: 8px 0;
-    padding: 8px 30px 8px 0;
+	font-family: "Montserrat";
+	font-style: normal;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 17px;
+	text-align: center;
+	text-transform: uppercase;
+	color: #ffffff;
+	border-right: 1px solid #c8c8c8;
+	padding: 8px 0;
+	padding: 8px 30px 8px 0;
 }
 .header__phone {
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 17px;
-    text-align: center;
-    text-transform: uppercase;
-    color: #FFFFFF;
-    padding: 8px 0 8px 27px;
-    
+	font-family: "Montserrat";
+	font-style: normal;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 17px;
+	text-align: center;
+	text-transform: uppercase;
+	color: #ffffff;
+	padding: 8px 0 8px 27px;
 }
 .header__burger {
-    width: 57px;
-    height: 33px;
+	width: 57px;
+	height: 33px;
 
-    @include breakpoint(xl) {
-        display: none;
-    }
-
-
+	@include breakpoint(xl) {
+		display: none;
+	}
 }
 
+.nav__mobile {
+	width: 31rem;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	-webkit-transition: all 0.4s ease;
+	transition: all 0.4s ease;
+	z-index: 9;
+	left: -100%;
+	.nav__mobile-wrapper {
+		overflow-y: scroll;
+		width: 100%;
+		height: 100%;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: column;
+		flex-direction: column;
+		background: #fff;
+	}
+}
+
+.nav__mobile.active {
+	left: 0;
+}
+
+.nav__mobile-close {
+    position: absolute;
+    right: -60px;
+    top: 36px;
+}
