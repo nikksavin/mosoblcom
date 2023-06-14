@@ -1,5 +1,5 @@
 .header {
-	background: rgba(46, 49, 51, 0.8);
+	background: #fff;
 	padding: 28px 0;
 	border-bottom: 1px solid #cfcfcf;
 	position: fixed;
@@ -12,6 +12,12 @@
 		padding: 35px 0;
 	}
 }
+
+.index-page header {
+	background: rgba(46, 49, 51, 0.8);
+}
+
+
 .container {
 }
 .header__wrapper {
@@ -107,6 +113,7 @@
 .header__burger {
 	width: 57px;
 	height: 33px;
+	cursor: pointer;
 
 	@include breakpoint(xl) {
 		display: none;
@@ -114,7 +121,7 @@
 }
 
 .nav__mobile {
-	width: 31rem;
+	width: 80%;
 	height: 100%;
 	position: fixed;
 	top: 0;
@@ -122,6 +129,7 @@
 	transition: all 0.4s ease;
 	z-index: 9;
 	left: -100%;
+
 	.nav__mobile-wrapper {
 		overflow-y: scroll;
 		width: 100%;
@@ -134,15 +142,148 @@
 		-ms-flex-direction: column;
 		flex-direction: column;
 		background: #fff;
+		padding: 0 20px;
+		padding-bottom: 30px;
+
+
+
+		@include breakpoint(lg) {
+			padding: 0 50px;
+			padding-bottom: 25px;
+		}
+
 	}
+
+	@include breakpoint(lg) {
+		left: unset;
+		right: -100%;
+		width: 380px;
+	}
+
+
 }
 
 .nav__mobile.active {
 	left: 0;
+
+	@include breakpoint(lg) {
+		left: unset;
+		right: 0;
+	}
 }
 
 .nav__mobile-close {
     position: absolute;
     right: -60px;
     top: 36px;
+	cursor: pointer;
+
+	@include breakpoint(lg) {
+		display: none;
+	}
+
+}
+
+.nav__mobile-wrapper {
+	display: flex;
+	flex-direction: column;
+
+	.nav__mobile-close {
+		display: none;
+
+		@include breakpoint(lg) {
+			display: flex;
+			position: relative;
+			right: unset;
+			top: unset;
+			margin: auto;
+			margin-top: 60px;
+		}
+
+	}
+}
+
+.nav__mobile-logo {
+	width: 177px;
+	height: 29px;
+	margin-top: 35px;
+
+
+	@include breakpoint(lg) {
+		margin: auto;
+	}
+
+}
+
+.nav__mobile--links {
+	margin-top: 85px;
+
+	li {
+		font-family: 'Oswald';
+		font-style: normal;
+		font-weight: 400;
+		font-size: 20px;
+		line-height: 140%;
+		text-transform: uppercase;
+		color: #2F444E;
+		padding: 15px 0;
+		border-bottom: 1px solid #E2E2E2;
+
+		@include breakpoint(lg) {
+			text-align: center;
+		}
+
+	}
+
+	@include breakpoint(lg) {
+		margin: auto 0;
+	}
+
+}
+
+.nav__mobile-phone {
+	font-family: 'Oswald';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 36px;
+	line-height: 140%;
+	text-align: center;
+	text-transform: uppercase;
+	color: #2B2A29;
+	margin-top: 150px;
+
+	@include breakpoint(lg) {
+		margin-top: auto;
+	}
+
+
+}
+
+.nav__mobile-request {
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 15px;
+	line-height: 18px;
+	text-align: center;
+	text-transform: uppercase;
+	color: #FFFFFF;
+	padding: 26px 33px;
+	background: #2B2A29;
+	border: 1px solid #2B2A29;
+	margin-top: 30px;
+}
+
+.nav__mobile-personal {
+	border: 1px solid #BCB082;
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 15px;
+	line-height: 18px;
+	text-align: center;
+	text-transform: uppercase;
+	color: #BCB082;
+	padding: 26px 33px;
+	margin-top: 30px;
 }

@@ -75,21 +75,28 @@ $(document).ready(function () {
 	}
 
 	heroNavInit();
-});
 
-$(document).ready(function () {
-	if ($(window).width() > 744) {
-		$("#hero").pagepiling({
-			navigation: false,
-			menu: "#menu",
-			anchors: [
-				"screen1",
-				"screen2",
-				"screen3",
-				"screen4",
-				"screen5",
-				"screen6",
-			],
+
+
+	function projectsPageSliderInit() {
+		let projectsPageSlider = new Swiper(".page__projects-nav", {
+			slidesPerView: "auto",
+			spaceBetween: 10,
+	
+			breakpoints: {
+				744: {
+					spaceBetween: 20,
+				},
+				1400: {
+					spaceBetween: 25,
+				},
+			},
 		});
 	}
+
+	projectsPageSliderInit();
+
+
+
 });
+

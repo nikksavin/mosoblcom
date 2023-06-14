@@ -1,0 +1,58 @@
+.top__head {
+    padding: 37px 0 47px 0;
+    border-bottom: 1px solid #EBEDEE;
+}
+
+.breadcrumbs-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.breadcrumbs-item, .breadcrumbs-separator {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 140%;
+    color: #748188;
+}
+
+.breadcrumbs-separator {
+    margin: 0 5px;
+}
+
+.head-title {
+    margin-top: 20px;
+}
+
+
+.page-title h1 {
+    font-family: 'Oswald';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 110%;
+    text-transform: uppercase;
+    color: #2B2A29;
+
+
+    @include breakpoint(lg) {
+        font-family: 'Oswald';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 77px;
+        line-height: 110%;
+        text-transform: uppercase;
+        color: #2B2A29;
+    }
+
+    @include breakpoint(xl) {
+        font-family: 'Oswald';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 96px;
+        line-height: 110%;
+        text-transform: uppercase;
+        color: #2B2A29;
+    }
+
+}

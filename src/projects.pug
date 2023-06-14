@@ -1,0 +1,129 @@
+---
+title: МОСОБЛКОМ | Проекты
+bodyClass: projects-page
+---
+
+extends includes/_page
+
+block main
+
+    include components/_breadcrumbs
+
+    +breadcrumbs('Выполненные проекты', 'Выполненные проекты')
+
+    .page__projects
+
+        .page__projects-filter
+
+            .container
+
+                .page__projects-nav-wrapper
+
+                    .page__projects-nav-title Выберите тип или год завершения проекта
+
+                    .page__projects-nav
+
+                        .swiper-wrapper
+
+                            .swiper-slide.page__projects-nav-item.active
+                                a(href="") все проекты
+                            .swiper-slide.page__projects-nav-item
+                                a(href="") благоустройство
+                            .swiper-slide.page__projects-nav-item
+                                a(href="") проектирование
+                            .swiper-slide.page__projects-nav-item
+                                a(href="") услуги связи
+                            .swiper-slide.page__projects-nav-item
+                                a(href="") комплексные решения
+                            .swiper-slide.page__projects-nav-item
+                                a(href="") НИОКР
+                            .swiper-slide.page__projects-nav-item
+                                a(href="") 2023
+                            .swiper-slide.page__projects-nav-item
+                                a(href="") 2022
+                            .swiper-slide.page__projects-nav-item
+                                a(href="") 2021
+                            .swiper-slide.page__projects-nav-item
+                                a(href="") Архивные
+
+        .page__projects-content
+        
+            .container 
+
+                .page__projects-wrapper
+
+                    .page__projects-items 
+
+                        .page__projects-item
+                            .page__projects-item-img
+                                img(src="assets/images/proj1.png", alt="")
+                            .page__projects-item-content
+                                .page__projects-item-type Благоустройство и городская инфраструктура
+                                .page__projects-item-title короткое Название проекта в одну или две строки текста
+                                a.page__projects-item-link Подробнее
+
+                        .page__projects-item
+                            .page__projects-item-img
+                                img(src="assets/images/proj2.png", alt="")
+                            .page__projects-item-content
+                                .page__projects-item-type Благоустройство и городская инфраструктура
+                                .page__projects-item-title короткое Название проекта в одну или две строки текста
+                                a.page__projects-item-link Подробнее
+
+                        .page__projects-item
+                            .page__projects-item-img
+                                img(src="assets/images/proj3.png", alt="")
+                            .page__projects-item-content
+                                .page__projects-item-type Благоустройство и городская инфраструктура
+                                .page__projects-item-title короткое Название проекта в одну или две строки текста
+                                a.page__projects-item-link Подробнее
+
+                        .page__projects-item
+                            .page__projects-item-img
+                                img(src="assets/images/proj1.png", alt="")
+                            .page__projects-item-content
+                                .page__projects-item-type Благоустройство и городская инфраструктура
+                                .page__projects-item-title короткое Название проекта в одну или две строки текста
+                                a.page__projects-item-link Подробнее
+
+                        .page__projects-item
+                            .page__projects-item-img
+                                img(src="assets/images/proj2.png", alt="")
+                            .page__projects-item-content
+                                .page__projects-item-type Благоустройство и городская инфраструктура
+                                .page__projects-item-title короткое Название проекта в одну или две строки текста
+                                a.page__projects-item-link Подробнее
+
+                        .page__projects-item
+                            .page__projects-item-img
+                                img(src="assets/images/proj3.png", alt="")
+                            .page__projects-item-content
+                                .page__projects-item-type Благоустройство и городская инфраструктура
+                                .page__projects-item-title короткое Название проекта в одну или две строки текста
+                                a.page__projects-item-link Подробнее
+                        
+                    .page__pagination
+                        .page__pagination-btn показать еще проекты
+
+    .page__projects-about 
+
+        .container 
+
+            .page__projects-about-wrapper
+
+                .page__projects-about-content 
+                    h2 Принципы работы
+                    p Основным принципом работы является – профессионализм и комплексный подход к решению задачи.
+                    p Заказчик привлекает нас как специалистов, а значит в праве рассчитывать не только на четкое выполнение задачи согласно предоставленной документации, но и на системный подход, взаимодействие с другими строительными подразделениями объекта, своевременную реакцию на ошибки, подводные камни, решение задач с учетом полученного ранее опыта. Построить по проекту могут многие, сделать чтобы правильно работало – единицы.
+
+                .page__projects-about-img
+                    img(src="assets/images/projects-about-img.png", alt="")
+
+                .page__projects-about-request
+
+                    .page__projects-about-title Есть вопросы?
+
+                    .page__projects-about-request-img
+                        img(src="assets/images/projects-request.png", alt="")
+
+                    .page__projects-about-request-btn обсудить ваш проект

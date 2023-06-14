@@ -32,15 +32,4 @@ $(document).ready(function () {
 		$("#page").toggleClass("bg-overlay");
 	});
 
-	// $('#nav .btn-style').on('click', function() {
-	//     $("body").removeClass("overflow-hidden")
-	//     $('#page').removeClass('bg-overlay')
-
-	//     $('#nav').removeClass('active')
-	//     $('#menu').removeClass('active')
-	// })
-
-	// $('#popup-success .btn-style').on('click', function() {
-	//     $('.is-close').trigger('click')
-	// })
 });
