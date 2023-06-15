@@ -1,5 +1,5 @@
 $(document).ready(function () {
-	if ($(window).width() > 744) {
+	if ($(window).width() > 744 && $("#hero").length) {
 		$("#hero").pagepiling({
 			navigation: false,
 			menu: "#menu",
