@@ -14,7 +14,7 @@
 }
 
 .index-page header {
-	background: rgba(46, 49, 51, 0.8);
+	background: rgba(46, 49, 51, 0);
 }
 
 
@@ -84,7 +84,7 @@
 		margin-right: 80px;
 	}
 
-	@include breakpoint(xl) {
+	@include breakpoint(hd) {
 		margin-right: 0;
 	}
 }
@@ -113,13 +113,51 @@
 	padding: 8px 0 8px 27px;
 }
 .header__burger {
-	width: 57px;
-	height: 33px;
+	margin-right: 25px;
 	cursor: pointer;
 
-	@include breakpoint(xl) {
+	@include breakpoint(lg) {
+		height: 29px;
+	}
+
+	@include breakpoint(hd) {
 		display: none;
 	}
+}
+
+.header__burger span {
+	background: #D9D9D9;
+	position: relative;
+	top: 2px;
+	display: block;
+	width: 41px;
+	height: 3px;
+}
+
+.header__burger span::before {
+	content: '';
+	background: #EEDFA8;
+	position: relative;
+	top: 11px;
+	left: 16px;
+	display: block;
+	width: 41px;
+	height: 3px;
+	transition: left .3s ease;
+}
+
+.header__burger:hover span::before {
+	left: 0;
+}
+
+.header__burger span::after {
+	content: '';
+	background: #D9D9D9;
+	position: relative;
+	top: 19px;
+	display: block;
+	width: 41px;
+	height: 3px;
 }
 
 .nav__mobile {
@@ -274,6 +312,7 @@
 	background: #2B2A29;
 	border: 1px solid #2B2A29;
 	margin-top: 30px;
+	cursor: pointer;
 }
 
 .nav__mobile-personal {

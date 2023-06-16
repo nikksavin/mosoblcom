@@ -6,22 +6,22 @@ mixin breadcrumbs(title, ...items)
 
             .container
 
-                .breadcrumbs-wrapper
+                .swiper
 
-                    .breadcrumbs-item
-                        a(href='/') Главная
+                    .breadcrumbs-wrapper.swiper-wrapper
 
-                    each item in items
+                        .breadcrumbs-item.swiper-slide
+                            a(href='/') Главная
 
-                        if item == items[items.length - 1]
-                            span.breadcrumbs-separator —
-                            .breadcrumbs-item
-                                span= item
+                        each item in items
 
-                        else
-                            span.breadcrumbs-separator —
-                            .breadcrumbs-item
-                                a(href="#")= item
+                            if item == items[items.length - 1]
+                                .breadcrumbs-item.swiper-slide
+                                    span= item
+
+                            else
+                                .breadcrumbs-item.swiper-slide
+                                    a(href="#")= item
 
         .head-title
 

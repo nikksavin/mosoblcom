@@ -4,11 +4,11 @@
 }
 
 .breadcrumbs-wrapper {
-    display: flex;
-    flex-wrap: wrap;
 }
 
-.breadcrumbs-item, .breadcrumbs-separator {
+.breadcrumbs-item {
+    display: flex;
+    width: auto!important;
     font-style: normal;
     font-weight: 300;
     font-size: 20px;
@@ -16,8 +16,15 @@
     color: #748188;
 }
 
-.breadcrumbs-separator {
-    margin: 0 5px;
+.breadcrumbs-item:not(:first-child):before {
+    content: "—";
+    margin: 0 10px;
+    display: inline-block;
+    color: #748188;
+}
+
+.breadcrumbs-item:last-child {
+    cursor: default;
 }
 
 .head-title {

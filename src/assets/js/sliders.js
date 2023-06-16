@@ -61,7 +61,7 @@ $(document).ready(function () {
 				forceToAxis: true,
 			},
 			hashNavigation: {
-				watchState: true,
+				replaceState: true,
 			},
 			slideToClickedSlide: true,
 			watchSlidesVisibility: true,
@@ -189,5 +189,43 @@ $(document).ready(function () {
 
 	anotherProjectsSliderInit();
 
+	function pageDirectionsNavInit() {
+		let pageDirectionNav = new Swiper(".page__directions-nav-items", {
+			slidesPerView: 'auto',
+			spaceBetween: 70,
+		});
+	}
+
+	pageDirectionsNavInit();
+
+	// BREADCRUMBS
+    let breadcrumbsSlider
+    let breadcrumbsSliderInit
+    
+    function breadcrumbsSliderRun() {
+        if ($('.breadcrumbs .swiper').length) {
+          if ($(window).width() < 1024) {
+            if(!breadcrumbsSliderInit) {
+              breadcrumbsSliderInit = true
+              breadcrumbsSlider = new Swiper(`.breadcrumbs .swiper`, {
+                    slidesPerView: 'auto',
+                    freeMode: true,
+                    slidesOffsetAfter: 0
+                })
+            }
+          } else {
+              if (typeof breadcrumbsSlider !== "undefined") {
+                breadcrumbsSliderInit = false
+                breadcrumbsSlider.destroy()
+              }
+          }
+        }
+    }
+    
+    breadcrumbsSliderRun()
+
+    $(window).on('resize', function() {
+      breadcrumbsSliderRun()
+    })
 });
 
