@@ -189,5 +189,15 @@ $(document).ready(function () {
 
 	anotherProjectsSliderInit();
 
+
+	function pageDirectionsNavInit() {
+		let pageDirectionNav = new Swiper(".page__directions-nav-items", {
+			slidesPerView: 'auto',
+			spaceBetween: 70,
+		});
+	}
+
+	pageDirectionsNavInit();
+
 });
 
