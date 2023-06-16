@@ -1,0 +1,42 @@
+---
+title: МОСОБЛКОМ | Контакты
+bodyClass: contacts-page
+yandexMap: true
+---
+
+extends includes/_page
+
+block main
+
+    include components/_breadcrumbs
+
+    +breadcrumbs('Контакты', 'Контакты')
+
+    .page__contacts
+        .container 
+            .page__contacts-inner
+                .page__contacts-content
+                    .page__contacts-subtitle Контактная информация
+                    .page__contacts-text 
+                        small Офисы компаний
+                        p Российская Федерация \ Центральный офис Адрес: Российская Федерация, 141011, Московская область, г. Мытищи, Фуражный проезд д.4 строение 4 помещение 22 
+                        p Республика Белоруссия \ Проектное бюро Адрес: Республика Беларусь, 220123, г. Минск, ул. В.Хоружей, д. 25 корпус 1, пом. 5
+                    .page__contacts-phones
+                        .page__contacts-phones-title Телефон
+                        a.page__contacts-phone(href="tel:+74952920101")
+                            .page__contacts-phone-value 8 (495) 292-01-01
+                            .page__contacts-phone-label (секретарь)
+                        a.page__contacts-phone(href="tel:+74952920202")
+                            .page__contacts-phone-value 8 (495) 292-02-02
+                            .page__contacts-phone-label (абонентское обслуживание)
+                    .page__contacts-emails
+                        .page__contacts-emails-title E-mail
+                        a.page__contacts-email(href="mailto:info@mosoblcom.ru")
+                            .page__contacts-email-value info@mosoblcom.ru
+                .page__contacts-map.js-contacts-map#map
+                .page__contacts-form
+                    include ./components/_form
+
+
+
+            

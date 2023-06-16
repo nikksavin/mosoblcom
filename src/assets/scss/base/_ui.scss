@@ -94,3 +94,41 @@ main {
 		padding: 0 70px;
 	}
 }
+
+.btn-style {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+	width: 100%;
+	padding: 26px;
+	background-color: #2B2A29;
+
+	font-family: 'Montserrat';
+	font-weight: 500;
+	font-size: 15px;
+	line-height: 18px;
+	text-align: center;
+	color: #ffffff;
+	text-transform: uppercase;
+	cursor: pointer;
+
+	transition: .3s;
+
+	&:hover {
+		color: #2B2A29;
+		background-color: #EEDFA8;
+	}
+	
+	@include breakpoint(lg) {
+		max-width: 285px;	
+	}
+}
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+}
