@@ -1,0 +1,98 @@
+.popup-form {
+    display: none;
+    cursor: default!important;
+
+    @include breakpoint(xl) {
+        max-width: 1174px;
+    }
+
+    &.fancybox__content {
+        padding: 40px;
+        
+        @include breakpoint(xl) {
+            padding: 92px 152px 104px;
+        }
+    }
+
+    .form__title {
+        display: none;
+    }
+
+    input:focus,
+    textarea:focus {
+        outline: none!important;
+    }
+
+    button.carousel__button.is-close {
+        top: 0;
+
+        & svg {
+            stroke: #000;
+            filter: none;
+        }
+    }
+
+    .popup-form__header {
+        
+        @include breakpoint(lg) {
+            display: grid;
+            grid-template-columns: 5fr 6fr;
+            gap: 0 78px;
+        }
+    }
+
+    .popup-form__title {
+        grid-column: 1/2;
+        font-family: 'Oswald';
+        font-weight: 400;
+        font-size: 28px;
+        line-height: 140%;
+        text-align: center;
+        text-transform: uppercase;
+        color: #2B2A29;
+
+        @include breakpoint(lg) {
+            text-align: unset;
+        }
+
+        @include breakpoint(xl) {
+            font-size: 36px;
+        }
+    }
+
+    .popup-form__subtitle {
+        margin: 30px 0;
+        grid-column: 2/3;
+        font-size: 20px;
+        line-height: 150%;
+        text-align: center;
+        color: #2B2A29;
+
+        @include breakpoint(lg) {
+            margin: 0;
+        }
+    }
+
+    .popup-form__subtitle a {
+        font-family: 'Oswald';
+        line-height: 140%;
+        outline: none!important;
+        border: none;
+    }
+
+    .form form {
+
+        @include breakpoint(hd) {
+            display: grid;
+        }
+    }
+
+    .form__accept-checkbox {
+        background: #EAEAEA;
+    }
+
+    .form__accept-checkbox::before {
+        background: #BCB082;
+    }
+    
+}
