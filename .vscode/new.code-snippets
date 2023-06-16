@@ -1,0 +1,24 @@
+{
+
+	"Media query": {
+		"scope": "css,scss,sass",
+		"prefix": "in",
+		"body": [
+			"@include breakpoint($1) {",
+			"	$0",
+			"}"
+		],
+		"description": ""
+	},
+
+	"Media query Max": {
+	   "scope": "css,scss,sass",
+	   "prefix": "inma",
+	   "body": [
+		   "@include breakpointMax($1) {",
+		   "	$0"
+			"}"
+	   ],
+	   "description": ""
+   },
+}

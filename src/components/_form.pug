@@ -1,0 +1,18 @@
+.form 
+    .form__title Обратная связь
+    form
+        .form__input
+            input(type="text", placeholder="Имя")
+        .form__input
+            input(type="tel", placeholder="Телефон")
+        .form__input
+            input(type="email", placeholder="Email")
+        .form__input
+            textarea(placeholder="Ваше сообщение")
+        .form__accept
+            label
+                input(type="checkbox", checked, style="display: none;")
+                span.form__accept-checkbox
+                span.form__accept-text.noselect Даю согласие на обработку 
+                    a(href="/personal") персональных данных
+        input.btn-style.form__btn(type="submit", value="Отправить сообщение")
