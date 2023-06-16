@@ -61,7 +61,7 @@ $(document).ready(function () {
 				forceToAxis: true,
 			},
 			hashNavigation: {
-				watchState: true,
+				replaceState: true,
 			},
 			slideToClickedSlide: true,
 			watchSlidesVisibility: true,
