@@ -97,6 +97,97 @@ $(document).ready(function () {
 	projectsPageSliderInit();
 
 
+	function projectsPageGalleryNavSliderInit() {
+		let projectsPageGallerNavySlider = new Swiper(".projects-detail__gallery-nav", {
+			slidesPerView: "auto",
+			spaceBetween: 10,
+	
+			breakpoints: {
+				744: {
+					spaceBetween: 20,
+				},
+				1400: {
+					spaceBetween: 25,
+				},
+			},
+		});
+	}
+
+	projectsPageGalleryNavSliderInit();
+
+
+	function projectsPageGallerySliderInit() {
+		let projectsPageGallerSlider = new Swiper(".projects-detail__gallery-bottom", {
+			slidesPerView: 2,
+			spaceBetween: 10,
+			centeredSlides: true,
+			loop: true,
+
+			navigation: {
+				nextEl: ".projects-detail__gallery-next",
+				prevEl: ".projects-detail__gallery-prev",
+			},
+			breakpoints: {
+				744: {
+					spaceBetween: 20,
+				},
+				1400: {
+					spaceBetween: 25,
+				},
+			},
+		});
+	}
+
+	projectsPageGallerySliderInit();
+
+
+	function projectsPageTimelineSliderInit() {
+		let projectsPageTimelineSlider = new Swiper(".projects-detail__timeline-slider", {
+			slidesPerView: 1.09,
+			// spaceBetween: 10,
+			// centeredSlides: true,
+			// loop: true,
+
+
+			breakpoints: {
+				544: {
+					slidesPerView: 2.09,
+				},
+
+				1400: {
+					slidesPerView: 4.01,
+				},
+			},
+			
+		});
+	}
+
+	projectsPageTimelineSliderInit();
+
+
+	function anotherProjectsSliderInit() {
+		let anotherProjectsSlider = new Swiper(".another__projects-items ", {
+			slidesPerView: 1,
+
+			navigation: {
+				nextEl: ".another__projects-next",
+				prevEl: ".another__projects-prev",
+			},
+			breakpoints: {
+				744: {
+					slidesPerView: 2,
+					spaceBetween: 100,
+					centeredSlides: true,
+					loop: true,
+				},
+				// 1400: {
+				// 	spaceBetween: 25,
+				// },
+			},
+		});
+	}
+
+	anotherProjectsSliderInit();
 
 });
 
