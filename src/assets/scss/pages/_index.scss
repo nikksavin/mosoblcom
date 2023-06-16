@@ -2,14 +2,14 @@
 
     overflow: auto;
 
-    @include breakpoint(md) {
+    @include breakpoint(lg) {
         overflow: hidden;
     }
 
 	#page {
         overflow-x: hidden;
 		overflow-y: scroll;
-        @include breakpoint(md) {
+        @include breakpoint(lg) {
             overflow: hidden;
             width: 100vw;
             height: 100vh;
@@ -98,6 +98,7 @@
 		position: absolute;
 		top: 50%;
 		right: 50px;
+		z-index: 1;
 	}
 
 	@include breakpoint(xl) {
@@ -117,18 +118,6 @@
 	cursor: pointer;
 }
 
-.hero__nav-next:hover .hero__nav-img {
-	display: flex;
-	// animation: zoom-in .5s ease-out;
-}
-
-.hero__nav-next:hover .hero__nav-icon {
-	width: 90px;
-	height: 90px;
-	transition: all 0.5s ease-out;
-	// animation: zoom-out .5s ease-out;
-}
-
 // .hero__nav-next:hover .hero__nav-icon img {
 //     animation: go-right 1s ease ;
 // }
@@ -145,17 +134,26 @@
 	}
 }
 .hero__nav-img {
-	display: none;
+	display: flex;
 	transition: all 1s ease-in;
 	position: absolute;
 	width: 193px;
 	height: 193px;
 	border: 1px solid #00000099;
 	border-radius: 50%;
+	transform: scale(0);
+	transition: all 0.5s ease;
+	opacity: 0;
 	z-index: 1;
 }
 
+.hero__nav:hover .hero__nav-img {
+	transform: scale(1);
+	opacity: 1;
+}
+
 .hero__nav-icon {
+	position: relative;
 	width: 115px;
 	height: 115px;
 	background: #636e74;
@@ -165,7 +163,34 @@
 	justify-content: center;
 	border-radius: 50%;
 	overflow: hidden;
+	transition: all 0.5s ease;
 	z-index: 2;
+}
+
+.hero__nav:hover .hero__nav-icon {
+	width: 90px;
+	height: 90px;
+}
+
+.hero__nav-icon img {
+	position: absolute;
+	transition: all .5s ease;
+}
+
+.hero__nav-icon img:first-child {
+	left: -60px;
+}
+
+.hero__nav-icon img:last-child {
+	right: calc(50% - 18px);
+}
+
+.hero__nav:hover .hero__nav-icon img:first-child {
+	left: calc(50% - 18px);
+}
+
+.hero__nav:hover .hero__nav-icon img:last-child {
+	right: -60px;
 }
 
 @keyframes zoom-in {
@@ -414,8 +439,9 @@
 	z-index: 7;
 
 	li {
-		width: fit-content !important;
-		max-width: 226px;
+		// width: fit-content !important;
+		// max-width: 226px;
+		width: auto;
 		font-family: "Oswald";
 		font-style: normal;
 		font-weight: 400;
