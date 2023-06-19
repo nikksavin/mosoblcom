@@ -57,6 +57,7 @@ main {
 	min-width: 360px;
 	min-height: 100%;
 	max-width: 100%;
+	overflow: hidden;
 }
 
 #page::before {
@@ -95,7 +96,11 @@ main {
 	}
 }
 
-.btn-style {
+.pp-section {
+	overflow: hidden;
+}
+
+body:not(.index-page) .btn-style {
 	display: flex;
 	justify-content: center;
 	align-items: center;
