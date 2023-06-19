@@ -1,5 +1,11 @@
 .directions-inner-page {
     overflow: auto;
+    
+    .header__nav li,
+    .header__personal,
+    .header__phone {
+        color: #2B2A29;
+    }
 }
 
 .directions-inner-page main {

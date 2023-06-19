@@ -24,7 +24,8 @@
     @include breakpoint(hd) {
         overflow: hidden;
         position: relative;
-        padding: 140px 0 120px;
+        padding: 100px 0 120px;
+        padding-bottom: 0;
     }
 }
 
@@ -37,7 +38,7 @@
     }
     @include breakpoint(hd) {
         grid-template-columns: 1fr 1fr 1fr;
-        gap: 40px;
+        gap: 0;
     }
 }
 
@@ -134,6 +135,7 @@
     }
     @include breakpoint(hd) {
         height: 690px;
+        margin-bottom: 100px;
     }
 }
 .page__contacts-map::before,

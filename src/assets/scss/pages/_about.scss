@@ -25,7 +25,8 @@
     @include breakpoint(hd) {
         overflow: hidden;
         position: relative;
-        padding: 140px 0 120px;
+        // padding: 140px 0 120px;
+        padding: 0;
     }
 }
 
@@ -39,6 +40,12 @@
     @include breakpoint(hd) {
         grid-template-columns: 3fr 3fr 3fr;
         gap: calc(100% / 12);
+    }
+}
+
+.page__about-content {
+    @include breakpoint(md) {
+        padding: 140px 0 120px;
     }
 }
 
@@ -69,6 +76,13 @@
     @include breakpoint(lg) {
         margin-bottom: 0;
     }
+
+    @include breakpoint(hd) {
+        padding: 140px 0 120px;
+        border-right: 1px solid #CDCCCC;
+        border-left: 1px solid #CDCCCC;
+    }
+
 }
 
 .page__about-right-text {
@@ -168,6 +182,7 @@
     @include breakpoint(hd) {
         display: block;
         grid-column: unset;
+        padding: 140px 0 120px;
     }
 }
 
