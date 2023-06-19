@@ -57,11 +57,12 @@ $(document).ready(function () {
 			spaceBetween: 30,
 			watchSlidesProgress: true,
 			loop: false,
+			freemode: true,
 			mousewheel: {
 				forceToAxis: true,
 			},
 			hashNavigation: {
-				replaceState: true,
+				watchState: true,
 			},
 			slideToClickedSlide: true,
 			watchSlidesVisibility: true,

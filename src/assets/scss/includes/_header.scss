@@ -18,7 +18,22 @@
 }
 
 
+.header-backscroll {
+    top: 0!important;
+	background: #ffffff!important;
 
+	.header__nav li,
+    .header__personal,
+    .header__phone {
+        color: #2B2A29;
+    }
+}
+
+
+.header-fixed {
+    top: -15%;
+	transition: all .4s ease;
+}
 
 .container {
 }
