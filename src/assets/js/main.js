@@ -53,4 +53,23 @@ $(document).ready(function () {
 		$("#page").toggleClass("bg-overlay");
 	});
 
+	  // PLAY VIDEO ONCLICK
+	$('.hero__right-video-content').click(function() {
+		var video = $(this).prev()[0];
+  
+		if (video.paused) {
+		  $(this).parent().addClass('active')
+		  video.play();
+		}
+	});
+  
+	$('video').click(function() {
+	  var video = $(this)[0];
+  
+		if (!video.paused) {
+		  $(this).parent().removeClass('active')
+		  video.pause();
+		}
+	})
+
 });

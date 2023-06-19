@@ -466,7 +466,7 @@
 
 	.swiper-wrapper {
 		@include breakpoint(hd) {
-			padding-left: 290px;
+			// padding-left: 290px;
 		}
 	}
 }
