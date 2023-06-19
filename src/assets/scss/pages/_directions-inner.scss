@@ -1,6 +1,8 @@
 .directions-inner-page {
-    overflow: auto;
-    
+    overflow-x: hidden !important;
+	overflow-y: scroll !important;
+
+
     .header__nav li,
     .header__personal,
     .header__phone {
@@ -22,7 +24,8 @@
     }
 
     @include breakpoint(hd) {
-        padding: 90px 0 140px;
+        // padding: 90px 0 140px;
+        padding: 0;
         flex-wrap: nowrap;
     }
 }
@@ -35,6 +38,7 @@
 
     @include breakpoint(hd) {
         width: 340px;
+        padding: 120px 0;
     }
 }
 
@@ -98,8 +102,11 @@
 
     @include breakpoint(hd) {
         margin-top: 0;
-        width: 560px;
-        height: 735px;
+        width: 56rem;
+        height: unset;
+        padding: 12rem 0;
+        border-right: 1px solid #CDCCCC;
+        border-left: 1px solid #CDCCCC;
     }
 }
 
@@ -121,6 +128,7 @@
         margin-top: 0;
         display: block;
         width: 415px;
+        padding: 120px 0;
     }
 }
 
