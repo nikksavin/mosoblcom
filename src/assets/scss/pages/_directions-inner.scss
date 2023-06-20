@@ -88,6 +88,14 @@
     color: #FFFFFF;
     border: 1px solid #2B2A29;
     cursor: pointer;
+    transition: all .4s ease-in;
+	border: 1px solid #2b2a29;
+
+	&:hover {
+		border-color: #eedfa8;
+		background-color: #eedfa8;
+		color: #2b2a29;
+	}
 
     @include breakpoint(lg) {
         margin: 0;
@@ -267,11 +275,21 @@
     color: #FFFFFF;
     border: 1px solid #2B2A29;
     cursor: pointer;
+    transition: all .4s ease-in;
+	cursor: pointer;
+
+	&:hover {
+		background: #eedfa8;
+		color: #2b2a29;
+		transition: all .4s ease-in;
+        border-color: #eedfa8;
+	}
 
     @include breakpoint(lg) {
         margin: 0;
         width: 273px;
     }
+    
 }
 
 .d-content__textblock .d-content__btn {

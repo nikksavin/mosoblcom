@@ -118,11 +118,14 @@ body:not(.index-page) .btn-style {
 	text-transform: uppercase;
 	cursor: pointer;
 
-	transition: .3s;
+	transition: .4s;
 
 	&:hover {
 		color: #2B2A29;
 		background-color: #EEDFA8;
+		transition: .4s;
+		border-color: #EEDFA8;
+		outline: none;
 	}
 	
 	@include breakpoint(lg) {

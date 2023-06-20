@@ -261,6 +261,14 @@
 	text-transform: uppercase;
 	color: #636e74;
     background-color: #EBEDEE;
+    transition: all .4s ease-in;
+	cursor: pointer;
+
+	&:hover {
+		background: #eedfa8;
+		color: #2b2a29;
+		transition: all .4s ease-in;
+	}
 
     & + & {
         // margin-left: 10px;
@@ -268,6 +276,7 @@
             // margin-left: 24px;
         }
     }
+
 }
 .page__about-nav-item.active {
 	background: #eedfa8;

@@ -366,6 +366,11 @@ header {
 	background: #eedfa8;
 	width: fit-content;
 
+	&:hover {
+		transition: all .4s ease-in;
+		background-color:  #fbe38b
+	}
+
 	@include breakpoint(lg) {
 		font-size: 15px;
 		padding: 26px 36px;
@@ -743,6 +748,15 @@ header {
             max-width: 420px;
         }
     }
+
+	.hero__btn {
+
+		&:hover {
+			color: #2b2a29;
+    		background: #eedfa8;
+		}
+
+	}
 
 }
 
