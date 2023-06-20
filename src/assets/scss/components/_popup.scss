@@ -137,3 +137,56 @@
 .fancybox__content :focus:not(.carousel__button.is-close) {
     outline: none!important;
 }
+
+.popup__success {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.popup__success.active {
+    display: flex;
+}
+
+.popup__success-title {
+    font-family: 'Oswald';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 140%;
+    text-align: center;
+    text-transform: uppercase;
+    color: #2B2A29;
+    margin-bottom: 70px;
+}
+
+.popup__success-text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 150%;
+    text-align: center;
+    color: #2B2A29;
+    margin-bottom: 70px;
+}
+
+.popup__success-btn {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 26px 36px;
+    color: #FFFFFF;
+    background: #2B2A29;
+    transition: all .3s ease-in;
+
+    &:hover {
+        background: #eedfa8;
+        color: #2b2a29;
+        transition: all .3s ease-in;
+        border-color: #eedfa8;
+    }
+}
