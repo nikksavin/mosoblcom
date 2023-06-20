@@ -55,7 +55,6 @@ $(document).ready(function () {
 		let pageMenu = new Swiper(".hero__menu", {
 			slidesPerView: "auto",
 			spaceBetween: 30,
-			// watchSlidesProgress: true,
 			loop: false,
 			freemode: true,
 			mousewheel: {
@@ -66,6 +65,7 @@ $(document).ready(function () {
 			},
 			slideToClickedSlide: true,
 			watchSlidesVisibility: true,
+			slidesOffsetAfter: 0
 
 			breakpoints: {
 				1400: {
@@ -232,5 +232,27 @@ $(document).ready(function () {
     $(window).on('resize', function() {
       breadcrumbsSliderRun()
     })
+
+	// const swiper = new Swiper('.swiper', {})
+
+	// swiper.on('slideChange', function () {
+	// 	currentSlide.textContent = swiper.activeIndex + 1
+	// 	gsap.to(swiper.slides[swiper.activeIndex], {scale:1, opacity:1})
+	// 	gsap.to(swiper.slides[swiper.previousIndex], {opacity:0.3, scale:0.8})
+	// 	swiper.slides[swiper.previousIndex].animation.pause(0)
+	// 	swiper.slides[swiper.activeIndex].animation.restart()
+	// });
+
+	// swiper.slides.forEach((slide, index)=>{
+	// 	let letter = slide.querySelector("h1")
+	// 	let description = slide.querySelector("h2")
+	// 	let chars = SplitText.create(description, {type:"chars"})
+	// 	let tl = gsap.timeline({paused:true})
+	// 	tl.from(letter, {scale:0, opacity:0, ease:"back", duration:1})
+	// 		.from(chars.chars, {opacity:0, yPercent:50, stagger:0.02}, "-=0.5")
+	// 	slide.animation = tl
+	// })
+
+	// swiper.slides[0].animation.play()
 });
 

@@ -5,6 +5,7 @@ $md: 744px;
 $lg: 1024px;
 $xl: 1400px;
 $hd: 1600px;
+$hdd: 1800px;
 
 @mixin breakpoint($point) {
     @if $point == s {
@@ -30,6 +31,9 @@ $hd: 1600px;
     }
     @else if $point == hd {
         @media (min-width: $hd) { @content ; }
+    }
+    @else if $point == hdd {
+        @media (min-width: $hdd) { @content ; }
     }
 }
 
@@ -57,6 +61,9 @@ $hd: 1600px;
     }
     @else if $point == hd {
         @media (max-width: $hd - 1px) { @content ; }
+    }
+    @else if $point == hdd {
+        @media (max-width: $hdd - 1px) { @content ; }
     }
 }
 

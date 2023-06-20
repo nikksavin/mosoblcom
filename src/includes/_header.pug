@@ -2,9 +2,10 @@ include _mixins
 block header
 
     header#header.header
+        .hr-line
         .container
         
-            .header__wrapper
+            .header__wrapper(style="opacity: 0")
 
                 .header__logo 
                     img(src="assets/images/logo.svg", alt="logo")
@@ -51,4 +52,3 @@ block header
             .nav__mobile-request(data-src="#popup-form" data-fancybox) обсудить ваш проект
 
             .nav__mobile-personal личный кабинет
-                            
