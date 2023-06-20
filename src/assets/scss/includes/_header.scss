@@ -1,7 +1,6 @@
 .header {
 	background: #fff;
 	padding: 28px 0;
-	border-bottom: 1px solid #cfcfcf;
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -11,6 +10,17 @@
 	@include breakpoint(lg) {
 		padding: 35px 0;
 	}
+}
+
+.hr-line {
+	content: '';
+	background: #cfcfcf;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: 0%;
+	height: 1px;
+	transition: all .3s ease;
 }
 
 .index-page header {
