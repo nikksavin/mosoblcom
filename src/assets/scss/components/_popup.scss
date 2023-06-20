@@ -96,3 +96,44 @@
     }
     
 }
+
+.popup-video {
+    padding: 30px!important;
+}
+
+
+.video__popup {
+    position: relative;
+    video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: relative;
+    }
+
+    .hero__right-video-content {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+        cursor: pointer;
+    }
+
+    .hero__play {
+        border-radius: 50%;
+        border: 3px solid #bcb082;
+        padding: 2rem;
+        width: 75px;
+        height: 75px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+}
+
+.fancybox__content :focus:not(.carousel__button.is-close) {
+    outline: none!important;
+}

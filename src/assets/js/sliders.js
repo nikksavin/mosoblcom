@@ -54,8 +54,7 @@ $(document).ready(function () {
 	function heroNavInit() {
 		let pageMenu = new Swiper(".hero__menu", {
 			slidesPerView: "auto",
-			// spaceBetween: 30,
-			watchSlidesProgress: true,
+			spaceBetween: 30,
 			loop: false,
 			freemode: true,
 			mousewheel: {
@@ -68,11 +67,15 @@ $(document).ready(function () {
 			watchSlidesVisibility: true,
 			slidesOffsetAfter: 0
 
-			// breakpoints: {
-			// 	1400: {
-			// 		spaceBetween: 70,
-			// 	},
-			// },
+			breakpoints: {
+				1400: {
+					spaceBetween: 70,
+				},
+				1600: {
+					slidesOffsetBefore: 290,
+					spaceBetween: 70,
+				}
+			},
 		});
 	}
 

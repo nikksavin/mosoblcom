@@ -53,6 +53,7 @@ $(document).ready(function () {
 		$("#page").toggleClass("bg-overlay");
 	});
 
+
 	// GSAP ANIMATION
 	const tl = new TimelineMax();
 
@@ -74,4 +75,24 @@ $(document).ready(function () {
 	  .fromTo(".hero__slide-image", 2, {scale: 1.5 }, {scale: 1})
 	  .fromTo(".hero__right-text", 2, {y: 80, opacity: 0 }, {y: 0, opacity: 1, myFunc}, "-=2")
 	  
+
+	  // PLAY VIDEO ONCLICK
+	$('.hero__right-video-content').click(function() {
+		var video = $(this).prev()[0];
+  
+		if (video.paused) {
+		  $(this).parent().addClass('active')
+		  video.play();
+		}
+	});
+  
+	$('video').click(function() {
+	  var video = $(this)[0];
+  
+		if (!video.paused) {
+		  $(this).parent().removeClass('active')
+		  video.pause();
+		}
+	})
+
 });
