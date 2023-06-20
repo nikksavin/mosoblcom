@@ -88,13 +88,14 @@
     color: #FFFFFF;
     border: 1px solid #2B2A29;
     cursor: pointer;
-    transition: all .4s ease-in;
+    transition: all .3s ease-in;
 	border: 1px solid #2b2a29;
 
 	&:hover {
 		border-color: #eedfa8;
 		background-color: #eedfa8;
 		color: #2b2a29;
+        transition: all .3s ease-in;
 	}
 
     @include breakpoint(lg) {
@@ -275,13 +276,13 @@
     color: #FFFFFF;
     border: 1px solid #2B2A29;
     cursor: pointer;
-    transition: all .4s ease-in;
+    transition: all .3s ease-in;
 	cursor: pointer;
 
 	&:hover {
 		background: #eedfa8;
 		color: #2b2a29;
-		transition: all .4s ease-in;
+		transition: all .3s ease-in;
         border-color: #eedfa8;
 	}
 

@@ -72,13 +72,13 @@
 	line-height: 21px;
 	text-transform: uppercase;
 	color: #636e74;
-	transition: all .4s ease-in;
+	transition: all .3s ease-in;
 	cursor: pointer;
 
 	&:hover {
 		background: #eedfa8;
 		color: #2b2a29;
-		transition: all .4s ease-in;
+		transition: all .3s ease-in;
 	}
 
 }
@@ -198,11 +198,11 @@
 	width: fit-content;
 	cursor: pointer;
 	border: 1px solid #eedfa8;
-	transition: all .4s ease-in;
+	transition: all .3s ease-in;
 
 	&:hover {
 		border-color: #2b2a29;
-		transition: all .4s ease-in;
+		transition: all .3s ease-in;
 		color: #ffffff;
 		background-color: #2b2a29;
 	}
@@ -349,7 +349,7 @@
 	padding: 24px 70px;
     margin-top: auto;
     cursor: pointer;
-	transition: all .4s ease-in;
+	transition: all .3s ease-in;
 	border: 1px solid #2b2a29;
 
 	&:hover {

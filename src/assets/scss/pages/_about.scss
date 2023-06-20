@@ -261,13 +261,13 @@
 	text-transform: uppercase;
 	color: #636e74;
     background-color: #EBEDEE;
-    transition: all .4s ease-in;
+    transition: all .3s ease-in;
 	cursor: pointer;
 
 	&:hover {
 		background: #eedfa8;
 		color: #2b2a29;
-		transition: all .4s ease-in;
+		transition: all .3s ease-in;
 	}
 
     & + & {
