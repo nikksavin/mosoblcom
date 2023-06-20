@@ -65,7 +65,7 @@ $(document).ready(function () {
 			},
 			slideToClickedSlide: true,
 			watchSlidesVisibility: true,
-			slidesOffsetAfter: 0
+			slidesOffsetAfter: 0,
 
 			breakpoints: {
 				1400: {

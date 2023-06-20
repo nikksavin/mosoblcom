@@ -523,15 +523,15 @@
 	//     margin-left: 14.9%;
 	// }
 
-	.swiper-wrapper {
-		@include breakpoint(hd) {
-			padding-left: 80px;
-		}
+	// .swiper-wrapper {
+	// 	@include breakpoint(hd) {
+	// 		padding-left: 80px;
+	// 	}
 
-		@include breakpoint(hdd) {
-			padding-left: 290px;
-		}
-	}
+	// 	@include breakpoint(hdd) {
+	// 		padding-left: 290px;
+	// 	}
+	// }
 }
 
 .hero__get-request {
