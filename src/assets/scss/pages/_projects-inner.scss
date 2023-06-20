@@ -14,6 +14,20 @@
 		background-color: transparent;
 		transition: all .4s ease;
 	}
+
+	
+	.header__nav {
+
+		li.active {
+			position: relative;
+	
+			&::before {
+				background: #ffffff;
+			}
+		}
+	}
+
+
 }
 
 .page__projects-detail {
@@ -103,6 +117,18 @@
 	text-align: center;
 	text-transform: uppercase;
 	color: #eedfa8;
+
+
+	transition: all .4s ease-in;
+	cursor: pointer;
+
+	&:hover {
+		background: #eedfa8;
+		color: #2b2a29;
+		transition: all .4s ease-in;
+	}
+
+
 }
 .projects-detail__hero-desc {
 	font-family: "Oswald";
@@ -402,6 +428,15 @@
 	padding: 10px 25px;
 	background: #ebedee;
 	width: fit-content !important;
+	transition: all .3s ease-in;
+	cursor: pointer;
+
+	&:hover {
+		background: #eedfa8;
+		color: #2b2a29;
+		transition: all .3s ease-in;
+	}
+
 }
 
 .projects-detail__gallery-nav-item.active {
@@ -571,6 +606,14 @@
     background: #2B2A29;
     width: fit-content;
     cursor: pointer;
+	transition: all .3s ease-in;
+	cursor: pointer;
+
+	&:hover {
+		background: #eedfa8;
+		color: #2b2a29;
+		transition: all .3s ease-in;
+	}
 }
 
 .another-projects {

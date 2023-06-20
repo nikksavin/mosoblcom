@@ -232,6 +232,15 @@
         margin-top: 55px;
     }
 
+	transition: all .4s ease-in;
+	cursor: pointer;
+
+	&:hover {
+		background: #eedfa8;
+		color: #2b2a29;
+		transition: all .4s ease-in;
+	}
+
 }
 .footer__video-mob {
 	width: 100%;
