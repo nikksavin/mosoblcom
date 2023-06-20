@@ -29,6 +29,12 @@
 
 }
 
+header {
+	@include breakpointMax(lg) {
+		background: rgba(46, 49, 51, 0.8);
+	}
+}
+
 .hero__section {
 	background-color: #636e74;
 	position: relative;
