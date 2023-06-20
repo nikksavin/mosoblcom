@@ -43,6 +43,16 @@ $(document).ready(function () {
 
 			slider.controller.control = heroSliderPag;
 
+			const tl = new TimelineMax();
+
+			slider.on('slideChange', function() {
+				tl
+				.fromTo(`.hero__direction`, 1, {x: -50 + '%', opacity: 0}, {x: 0, opacity: 1})
+				.fromTo(`.hero__title`, 1, {x: -100, opacity: 0}, {x: 0, opacity: 1}, "-=1")
+				.fromTo(`.hero__btn`, 1, {x: -50 + '%', opacity: 0}, {x: 0, opacity: 1}, "-=1")
+				.fromTo(`.hero__right, .hero__text`, 1, {y: 80, opacity: 0 }, {y: 0, opacity: 1}, "-=1")
+			})
+
 			function addZero(num) {
 				return num > 9 ? num : "0" + num;
 			}
@@ -69,9 +79,10 @@ $(document).ready(function () {
 
 			breakpoints: {
 				1400: {
+					slidesOffsetBefore: 80,
 					spaceBetween: 70,
 				},
-				1600: {
+				1800: {
 					slidesOffsetBefore: 290,
 					spaceBetween: 70,
 				}
