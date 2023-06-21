@@ -54,6 +54,15 @@
 
     @include breakpoint(md) {
         width: calc( 100% / 12 * 6 );
+        height: 790px;
+    }
+
+    @include breakpoint(lg) {
+        height: 750px;
+    }
+
+    @include breakpoint(xl) {
+        height: 700px;
     }
 
     img {
