@@ -8,6 +8,7 @@
 
 .breadcrumbs-item {
     display: flex;
+    align-items: center;
     width: auto!important;
     font-style: normal;
     font-weight: 300;
@@ -17,10 +18,12 @@
 }
 
 .breadcrumbs-item:not(:first-child):before {
-    content: "—";
+    content: "";
     margin: 0 10px;
+    background: #748188;
     display: inline-block;
-    color: #748188;
+    width: 20px;
+    height: 1px;
 }
 
 .breadcrumbs-item:last-child {
